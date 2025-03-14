@@ -1,5 +1,10 @@
 export interface ChampionRotation {
-    freeChampionIds: number[];
-    freeChampionIdsForNewPlayers: number[];
-    maxNewPlayerLevel: number;
-  }
+  freeChampionIds: number[];
+}
+
+export interface ChampionData {
+  id: number;
+  name: string;
+  imageUrl: string;
+  champKey: string;
+}

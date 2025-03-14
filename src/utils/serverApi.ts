@@ -19,3 +19,4 @@ export async function fetchChampionList() {
     const data = await response.json();
     return data.data[id] as ChampionDetail;
   }
+  
