@@ -8,7 +8,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {/* 네비게이션 바 */}
         <header className="bg-[#5383E8] text-white py-4 shadow-lg">
           <nav className="container mx-auto flex justify-between items-center px-6">
-            <h1 className="text-2xl font-bold">리그 오브 레전드 정보 앱</h1>
             <ul className="flex space-x-6 text-lg">
               <li>
                 <Link href="/" className="hover:text-[#FFAA00] transition">
