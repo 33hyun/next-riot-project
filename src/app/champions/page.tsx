@@ -2,12 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { fetchChampionList } from "@/utils/serverApi";
 import { Champion } from "@/types/Champion";
+import { PATCH_VERSION } from "@/constants";
 
 export default async function ChampionsPage() {
-  // 최신 패치 버전 지정
-  const patchVersion = "15.5.1";
-
-  // 챔피언 리스트 가져오기
   const champions: Champion[] = await fetchChampionList();
 
   return (
@@ -24,11 +21,11 @@ export default async function ChampionsPage() {
             className="block bg-[#333] rounded-lg shadow-md p-4 hover:bg-[#444] transition text-center"
           >
             <Image
-              src={`https://ddragon.leagueoflegends.com/cdn/${patchVersion}/img/champion/${champion.image}`}
+              src={`https://ddragon.leagueoflegends.com/cdn/${PATCH_VERSION}/img/champion/${champion.image}`}
               alt={champion.name}
               width={120}
               height={120}
-              priority={index < 3} // 상위 3개 챔피언 우선 로드하여 LCP 최적화
+              priority={index < 3}
               className="rounded-lg mx-auto"
             />
             <h3 className="mt-2 font-bold text-[#FFAA00]">{champion.name}</h3>

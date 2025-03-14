@@ -1,11 +1,12 @@
-export interface Item {
-    id: string;
-    name: string;
-    description: string;
-    gold: {
-      total: number;
-      base: number;
-      sell: number;
-    };
-    image: string;
-  }
+export type Item = {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  gold?: {
+    base: number;
+    total: number;
+    sell: number;
+    purchasable: boolean;
+  };
+};
